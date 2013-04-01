@@ -31,7 +31,6 @@ function mirrorfiles() {
     # `.dotfiles` repository.
     link "bash/bashrc"        ".bashrc"
     link "bash/bash_profile"  ".bash_profile"
-    link "bash/inputrc"       ".inputrc"
     link "git/gitattributes"  ".gitattributes"
     link "git/gitignore"      ".gitignore"
     link "osx"                ".osx"
@@ -44,5 +43,6 @@ read -p "This will overwrite some existing files in your home directory. Are you
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]; then
     mirrorfiles
+    touch ~/.bash_profile.local
     source ~/.bash_profile
 fi

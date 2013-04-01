@@ -6,8 +6,6 @@ FILES="$HOME/.bash_profile.local"
 FILES="$FILES $HOME/.dotfiles/bash/exports"
 # Aliases
 FILES="$FILES $HOME/.dotfiles/bash/aliases"
-# Functions
-FILES="$FILES $HOME/.dotfiles/bash/functions"
 # Custom Bash prompt
 FILES="$FILES $HOME/.dotfiles/bash/bash_prompt"
 
