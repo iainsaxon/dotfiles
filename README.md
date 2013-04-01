@@ -6,7 +6,7 @@ My OS X dotfiles.
 
 ### Prerequisites
 
-* Git (1.7+)
+* Git (1.8+)
 
 ### Installation
 
@@ -33,7 +33,6 @@ cd ~/.dotfiles
 bash bootstrap.sh
 ```
 
-
 ## Custom OS X defaults
 
 When setting up a new Mac, you may want to customise your OS X defaults after
@@ -42,7 +41,6 @@ installing the dotfiles.
 ```bash
 bash .osx
 ```
-
 
 ## Adding local and private configurations
 
@@ -74,7 +72,7 @@ git config --global user.email "$GIT_AUTHOR_EMAIL"
 
 ## Custom bash prompt
 
-I use the  [Solarized theme](https://github.com/altercation/solarized) for the standard OSX terminal.
+I use the  [Solarized theme](https://github.com/altercation/solarized) for the standard OSX terminal [Download](https://raw.github.com/tomislav/osx-lion-terminal.app-colors-solarized/master/Solarized%20Dark.terminal).
 
 Screenshot:
 

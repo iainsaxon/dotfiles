@@ -1,4 +1,4 @@
-# .osx
+# osx.sh
 
 # Menu bar: show remaining battery time; hide percentage
 defaults write com.apple.menuextra.battery ShowPercent -string "NO"
