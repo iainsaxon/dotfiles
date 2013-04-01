@@ -54,3 +54,5 @@
 [diff]
     tool = Kaleidoscope
 
+[credential]
+	helper = osxkeychain
