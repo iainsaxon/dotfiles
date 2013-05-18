@@ -17,7 +17,7 @@ configuration taking place in `~/.extra` is not accidentally committed.
 ```bash
 git clone git://github.com/leevigraham/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
-bash bootstrap.sh
+dotfiles
 ```
 
 N.B. This will overwrite any existing dotfiles in your HOME and `.vim`
@@ -30,7 +30,7 @@ remote repo.
 
 ```bash
 cd ~/.dotfiles
-bash bootstrap.sh
+dotfiles
 ```
 
 ## Custom OS X defaults
@@ -39,7 +39,8 @@ When setting up a new Mac, you may want to customise your OS X defaults after
 installing the dotfiles.
 
 ```bash
-bash .osx
+cd ~/.dotfiles
+osx
 ```
 
 ## Adding local and private configurations
@@ -60,8 +61,8 @@ export PATH
 # Git credentials
 # Not under version control to prevent people from
 # accidentally committing with your details
-GIT_AUTHOR_NAME="Nicolas Gallagher"
-GIT_AUTHOR_EMAIL="nicolas@example.com"
+GIT_AUTHOR_NAME="Your Name"
+GIT_AUTHOR_EMAIL="you@example.com"
 GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
 GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
 # Set the credentials (modifies ~/.gitconfig)
