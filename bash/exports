@@ -11,6 +11,8 @@ export HISTSIZE=32768
 export HISTFILESIZE=$HISTSIZE
 export HISTCONTROL=ignoredups
 
+export JENKINS_URL=http://localhost:8080/
+
 # Make some commands not show up in history
 export HISTIGNORE="ls:ls *:cd:cd -:pwd;exit:date:* --help"
 
@@ -24,7 +26,5 @@ export HISTIGNORE="ls:ls *:cd:cd -:pwd;exit:date:* --help"
 
 # add to beginning of PATH so that it always take precedence over /usr/bin
 [ -d "/usr/local/bin" ] && PATH="/usr/local/bin:$PATH";
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 export PATH
