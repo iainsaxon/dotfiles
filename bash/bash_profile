@@ -29,3 +29,4 @@ if [[ -r $bash_completion_path ]]; then
 fi
 
 eval "$(hub alias -s)"
+eval "$(grunt --completion=bash)"
