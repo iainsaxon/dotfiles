@@ -15,8 +15,6 @@ declare -a dirs_to_append=(
     "$HOME/.rvm/bin" # Add RVM to PATH for scripting
     "$(brew --prefix coreutils)/libexec/gnubin" # Add brew-installed GNU core utilities bin
     "$(brew --prefix)/share/npm/bin" # Add npm-installed package bin
-    "$(brew --prefix josegonzalez/php/php54)/bin" # Add PHP 5.4 PATH
-    "$(brew --prefix josegonzalez/php/php53)/bin" # Add PHP 5.3 PATH
 )
 
 # Prepend directories to PATH

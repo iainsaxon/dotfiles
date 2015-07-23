@@ -2,10 +2,8 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+set rtp+=~/.var/vim/bundle/Vundle.vim
+call vundle#begin('~/.var/vim/bundle')
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
@@ -18,6 +16,8 @@ Bundle "wookiehangover/jshint.vim"
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+colorscheme molokai
 
 set backupdir=~/.var/vim/backup/
 set directory=~/.var/vim/swap/
@@ -70,6 +70,8 @@ nnoremap <C-l> <C-w>l
 set splitbelow
 set splitright
 
+autocmd FileType php set syntax=php
+
 if has("gui_macvim")
 
     set transparency=2
@@ -78,48 +80,34 @@ if has("gui_macvim")
 
     au BufRead,BufNewFile *.twig set filetype=htmljinja
 
-    autocmd FileType php set syntax=php
-
     autocmd FileType php set omnifunc=phpcomplete#CompletePHP
-    " autocmd vimenter * if !argc() | NERDTree | endif
-
-    colorscheme molokai
 
     let g:phpqa_codesniffer_args = "--standard=Symfony2"
     let g:phpqa_messdetector_ruleset = "/Users/iainsaxon/.vim/phpmd-ruleset.xml"
 
     " If php-cs-fixer is in $PATH, you don't need to define line below
-    let g:php_cs_fixer_path = "php-cs-fixer"       " define the path to the php-cs-fixer.phar
-    let g:php_cs_fixer_level = "all"                  " which level ?
-    let g:php_cs_fixer_config = "sf21"             " configuration
-    let g:php_cs_fixer_php_path = ""               " Path to PHP
-    " let g:php_cs_fixer_fixers_list = ""               " List of fixers
-    let g:php_cs_fixer_enable_default_mapping = 1     " Enable the mapping by default (<leader>pcd)
-    let g:php_cs_fixer_dry_run = 0                    " Call command with dry-run option
-    let g:php_cs_fixer_verbose = 0                    " Return the output of command if 1, else an inline information.
+    let g:php_cs_fixer_path = "php-cs-fixer"  " define the path to the php-cs-fixer.phar
+    let g:php_cs_fixer_level = "all"  " which level ?
+    let g:php_cs_fixer_config = "sf21"  " configuration
+    let g:php_cs_fixer_php_path = ""  " Path to PHP
+    " let g:php_cs_fixer_fixers_list = ""  " List of fixers
+    let g:php_cs_fixer_enable_default_mapping = 1  " Enable the mapping by default (<leader>pcd)
+    let g:php_cs_fixer_dry_run = 0  " Call command with dry-run option
+    let g:php_cs_fixer_verbose = 0  " Return the output of command if 1, else an inline information.
 
     autocmd FileType php inoremap <C-d> <ESC>:call PhpDocSingle()<CR>i
     autocmd FileType php nnoremap <C-d> :call PhpDocSingle()<CR>
     autocmd FileType php vnoremap <C-d> :call PhpDocRange()<CR>
-    " autocmd FileType php vnoremap <C-d> :call PhpCsFixerFixFile()<CR>
     autocmd FileType twig set syntax=htmljinja
 
-    " map <C-n> :NERDTreeToggle<CR>
     map <C-n> :E<CR>
 
-    let g:ctrlp_map = '<C-p>'
-    let g:ctrlp_regexp = 1
-    let g:ctrlp_by_filename = 1
-
+    let g:vdebug_options = {}
     let g:vdebug_options["ide_key"] = 'sublime.xdebug'
     let g:vdebug_options["continuous_mode"] = 1
 
     let g:user_zen_expandabbr_key = '<C-y>'
     let g:use_zen_complete_tag = 1
-
-    autocmd FileType php BufWritePost * call PhpCsFixerFixFile()
-
-    call AutoHighlightToggle()
 
 endif
 
