@@ -21,3 +21,11 @@ Thumbs.db
 *.swo
 *.swp
 *.vi
+
+# Dotfile related directories
+~/.vim/backups/*
+~/.vim/swap/*
+
+# Always keep these files
+!.gitkeep
+!.gitignore
