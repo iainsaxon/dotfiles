@@ -19,8 +19,8 @@ Bundle "wookiehangover/jshint.vim"
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-set backupdir=~/.vim/backup/
-set directory=~/.vim/swap/
+set backupdir=~/.var/vim/backup/
+set directory=~/.var/vim/swap/
 
 set shell=bash\ -l
 

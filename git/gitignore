@@ -23,8 +23,7 @@ Thumbs.db
 *.vi
 
 # Dotfile related directories
-~/.vim/backups/*
-~/.vim/swap/*
+vim/bundle
 
 # Always keep these files
 !.gitkeep

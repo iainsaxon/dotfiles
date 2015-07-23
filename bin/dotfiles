@@ -31,6 +31,10 @@ function mirrorfiles() {
         rm -rf "${HOME}/.vim"
     fi
 
+    # Create the .var directories
+    mkdir -p "${HOME}/.var/vim/backup"
+    mkdir -p "${HOME}/.var/vim/swap"
+
     # Create the necessary symbolic links between the `.dotfiles` and `HOME`
     # directory. The `bash_profile` sources other files directly from the
     # `.dotfiles` repository.
@@ -41,6 +45,10 @@ function mirrorfiles() {
     link "git/gitignore"      ".gitignore"
     link "vim"                ".vim"
     link "vim/vimrc"          ".vimrc"
+
+    # Install Vundle
+    git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    vim +PluginInstall +qall
 
     echo "Dotfiles update complete"
 }
