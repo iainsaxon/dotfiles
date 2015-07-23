@@ -39,7 +39,8 @@ function mirrorfiles() {
     link "git/gitattributes"  ".gitattributes"
     link "git/gitconfig"      ".gitconfig"
     link "git/gitignore"      ".gitignore"
-
+    link "vim"                ".vim"
+    link "vim/vimrc"          ".vimrc"
 
     echo "Dotfiles update complete"
 }
